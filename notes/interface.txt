@@ -11,11 +11,6 @@ Interfaces specify only what the class is doing, not how it is doing it.
 The problem with MULTIPLE INHERITANCE is that two classes may define different ways of doing the same thing,
 and the subclass can't choose which one to pick.
 
-Key difference between a class and an interface: a class can maintain state information
-(especially through the use of instance variables), but an interface cannot.
-✅ Class can have instance variables, so each object can have a different state.
-✅ Interface variables are constants (static final), so they cannot maintain object-specific state.
-
 Using interface, you can specify a set of methods that can be implemented by one or more classes.
 Although they are similar to abstract classes, interfaces have an additional capability:
 A class can implement more than one interface. By contrast, a class can only inherit a single superclass
@@ -48,9 +43,6 @@ a special-use feature, and the original intent behind interface still remains.
 Variables can be declared inside of interface declarations.
 NOTE: They are implicitly final and static, meaning they cannot be changed by the implementing class.
 They must also be initialized. All methods and variables are implicitly public.
-
-NOTE: The methods that implement an interface must be declared public. Also, the type signature of the implementing
-method must match exactly the type signature specified in the interface definition.
 
 It is both permissible and common for classes that implement interfaces to define additional members of their own.
 
@@ -127,3 +119,12 @@ i.e. static interface methods should have a body! They cannot be abstract.
 
 NOTE : when overriding methods, the access modifier should be same or better i.e. if in Parent Class it was protected, then then overridden should be either protected or public.
 
+Key difference between a class and an interface: a class can maintain state information
+(especially through the use of instance variables), but an interface cannot.
+✅ Class can have instance variables, so each object can have a different state.
+✅ Interface variables are constants (static final), so they cannot maintain object-specific state.
+✅ Default methods allow adding new methods to interfaces without breaking existing code.
+✅ If two interfaces have the same default method, the class must override it.
+
+NOTE: The methods that implement an interface must be declared public. Also, the type signature of the implementing
+method must match exactly the type signature specified in the interface definition.

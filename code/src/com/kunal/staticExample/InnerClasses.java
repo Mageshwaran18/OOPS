@@ -6,7 +6,7 @@ public class InnerClasses {
 
     static class Test {
         String name;
-        int age;
+        int age;      
         public Test(String name) {
             this.name = name;
             this.age = 10;

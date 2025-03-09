@@ -9,6 +9,7 @@ public class this_ex {
     }    
 
     public static class con {
+        
         String str;
         con() {
             this("Hello");

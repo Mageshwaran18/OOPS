@@ -7,6 +7,7 @@ public class Main {
 
         son.normal();
 
+        // abstrac class can't create object but can be used as a reference type
         Parent daughter = new Daughter(28);
         daughter.career();
 

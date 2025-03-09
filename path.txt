@@ -20,11 +20,12 @@ OOPS note 7 - 9
 --> constructors_this_finalize ( Not so important )
 
 OOPS note 10 - 14 
-    --> Inheritance 
+    --> properties / Inheritance 
         --> Box.java   
         --> BoxWeight.java  
         --> Main.java
     --> inheritance.txt ( Last two paragraphs are important )
+    --> static_final_method.java ( Refer page no 39,21(top) in Notes && very important)
 
 OOPS note 15 - 21 
     --> overloading.txt ( last two paragraphs important )
@@ -43,7 +44,7 @@ OOPS note  27 - 30
 
 OOPS note 30 - 38 
     --> Interface
-        --> interface.txt ( Important )
+        --> interface.txt ( Last 10 lines Important )
         --> extendDemo
             --> A.java
             --> B.java
