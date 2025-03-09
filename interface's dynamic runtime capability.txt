@@ -1,0 +1,92 @@
+### Problem Without Interface (Rigid & Inflexible)
+
+Imagine you have a **Dog** and a **Cat**. Both can **make sound**, but they are **not related** in inheritance. If we try to force them to inherit from a common class **(which they don't need to)**, we make the system rigid.
+
+```java
+class Dog {
+    void makeSound() {
+        System.out.println("Woof!");
+    }
+}
+
+class Cat {
+    void makeSound() {
+        System.out.println("Meow!");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.makeSound();  // Output: Woof!
+
+        Cat c = new Cat();
+        c.makeSound();  // Output: Meow!
+    }
+}
+```
+
+### Solution With Interface (Flexible & Extensible)
+
+We can solve this problem using an **interface**, which allows both `Dog` and `Cat` to have a common behavior **without forcing inheritance**.
+
+```java
+// Creating an interface
+interface Animal {
+    void makeSound();  // Method declared, but no implementation
+}
+
+// Dog implements the interface
+class Dog implements Animal {
+    public void makeSound() {
+        System.out.println("Woof!");
+    }
+}
+
+// Cat implements the interface
+class Cat implements Animal {
+    public void makeSound() {
+        System.out.println("Meow!");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal a;
+        
+        a = new Dog();
+        a.makeSound();  // Output: Woof!
+
+        a = new Cat();
+        a.makeSound();  // Output: Meow!
+    }
+}
+```
+
+### Why is this better?
+
+- `Dog` and `Cat` don't need to inherit from a forced parent class.
+- **Dynamic method resolution**: The method is resolved at runtime.
+- If we add a `Cow` class, we **don't need to change existing code**:
+
+```java
+class Cow implements Animal {
+    public void makeSound() {
+        System.out.println("Moo!");
+    }
+}
+```
+
+Now, we can simply do:
+
+```java
+a = new Cow();
+a.makeSound();  // Output: Moo!
+```
+
+### Final Takeaway
+
+- Interfaces allow **unrelated classes** to share common behavior.
+- Method calls are **resolved at runtime dynamically**.
+- More **flexible** than inheritance.
+
