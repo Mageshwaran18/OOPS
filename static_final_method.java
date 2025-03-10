@@ -23,7 +23,7 @@ class Child extends Parent {
 
     // Error! Cannot override final method
 
-    // static final ()
+    // static final fun ()
     // {
     //     System.out.println("Child final method");
     // }

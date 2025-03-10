@@ -1,5 +1,5 @@
 OOPS note 1 - 5 
-    --> classes.txt ( Not so important )
+    --> classes.txt ( Not so important ) Objects are characterized by three essential properties: state, identity, and behavior.
     --> finalize_ex.java 
         --> Singleton 
             --> Singleton.java 
